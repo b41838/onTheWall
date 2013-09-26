@@ -1,0 +1,791 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>cordova-plugin-media-capture/src/ios/CDVCapture.bundle at master · apache/cordova-plugin-media-capture · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="github-fe133-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 1.9.3p194-tcs-github-tcmalloc (2012-05-25, TCS patched 2012-05-27, GitHub v1.0.36) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="186F87F8:20C4:AE49C6:523E58FE" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="ExcASM3zNpcjy6I5FGl2hxEKzeD8K9BLVcaFusisBuw=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-175db69eb5b12a3beaa9f731b56623768d5c3311.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-2c867c2081830b4a942703b9d3d565bf90f6046d.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+    
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-8b4fabe9e63d144430e22b81cc883847f4012ebe.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-a47d7b5dbd111ab2f3e9718cc6e344fdf27a33e2.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="7c9d4d8ae5bef83e0fff6a00c1282728">
+
+        <meta property="og:title" content="cordova-plugin-media-capture"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/apache/cordova-plugin-media-capture"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="cordova-plugin-media-capture - Mirror of Apache Cordova Plugin media-capture"/>
+
+  <meta name="description" content="cordova-plugin-media-capture - Mirror of Apache Cordova Plugin media-capture" />
+
+  <meta content="47359" name="octolytics-dimension-user_id" /><meta content="apache" name="octolytics-dimension-user_login" /><meta content="10860603" name="octolytics-dimension-repository_id" /><meta content="apache/cordova-plugin-media-capture" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="10860603" name="octolytics-dimension-repository_network_root_id" /><meta content="apache/cordova-plugin-media-capture" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/apache/cordova-plugin-media-capture/commits/master.atom" rel="alternate" title="Recent Commits to cordova-plugin-media-capture:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production macintosh vis-public mirror">
+    <div class="wrapper">
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/signup">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Fapache%2Fcordova-plugin-media-capture%2Ftree%2Fmaster%2Fsrc%2Fios%2FCDVCapture.bundle">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="apache/cordova-plugin-media-capture"
+      data-branch="master"
+      data-sha="493f24ebf8c724535b81b9092039741a3cef5630"
+  >
+
+    <input type="hidden" name="nwo" value="apache/cordova-plugin-media-capture" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+      
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+  <a href="/login?return_to=%2Fapache%2Fcordova-plugin-media-capture"
+  class="minibutton with-count js-toggler-target star-button entice tooltipped upwards"
+  title="You must be signed in to use this feature" rel="nofollow">
+  <span class="octicon octicon-star"></span>Star
+</a>
+<a class="social-count js-social-count" href="/apache/cordova-plugin-media-capture/stargazers">
+  2
+</a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fapache%2Fcordova-plugin-media-capture"
+        class="minibutton with-count js-toggler-target fork-button entice tooltipped upwards"
+        title="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/apache/cordova-plugin-media-capture/network" class="social-count">
+        11
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/apache" class="url fn" itemprop="url" rel="author"><span itemprop="title">apache</span></a></span
+          ><span class="repohead-name-divider">/</span><strong
+          ><a href="/apache/cordova-plugin-media-capture" class="js-current-repository js-repo-home-link">cordova-plugin-media-capture</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+            <span class="mirror-flag">
+              <span class="text">mirrored from <a href="git://git.apache.org/cordova-plugin-media-capture.git">git://git.apache.org/cordova-plugin-media-capture.git</a></span>
+            </span>
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+      <div class="repository-with-sidebar repo-container ">
+
+        <div class="repository-sidebar">
+            
+
+<div class="repo-nav repo-nav-full js-repository-container-pjax js-octicon-loaders">
+  <div class="repo-nav-contents">
+    <ul class="repo-menu">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/apache/cordova-plugin-media-capture" aria-label="Code" class="js-selected-navigation-item selected" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /apache/cordova-plugin-media-capture">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+      <li class="tooltipped leftwards" title="Pull Requests"><a href="/apache/cordova-plugin-media-capture/pulls" aria-label="Pull Requests" class="js-selected-navigation-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /apache/cordova-plugin-media-capture/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>2</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+    </ul>
+    <div class="repo-menu-separator"></div>
+    <ul class="repo-menu">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/apache/cordova-plugin-media-capture/pulse" aria-label="Pulse" class="js-selected-navigation-item " data-pjax="true" data-selected-links="pulse /apache/cordova-plugin-media-capture/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/apache/cordova-plugin-media-capture/graphs" aria-label="Graphs" class="js-selected-navigation-item " data-pjax="true" data-selected-links="repo_graphs repo_contributors /apache/cordova-plugin-media-capture/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/apache/cordova-plugin-media-capture/network" aria-label="Network" class="js-selected-navigation-item js-disable-pjax" data-selected-links="repo_network /apache/cordova-plugin-media-capture/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+            <div class="only-with-full-nav">
+              
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/apache/cordova-plugin-media-capture.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/apache/cordova-plugin-media-capture.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/apache/cordova-plugin-media-capture" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/apache/cordova-plugin-media-capture" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" title="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+  <a href="http://mac.github.com" class="minibutton sidebar-button">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="/apache/cordova-plugin-media-capture/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   title="Download this repository as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+            </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<div class="file-navigation">
+  
+
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/apache/cordova-plugin-media-capture/tree/3.1.0/src/ios/CDVCapture.bundle" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="3.1.0" data-skip-pjax="true" rel="nofollow" title="3.1.0">3.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/apache/cordova-plugin-media-capture/tree/dev/src/ios/CDVCapture.bundle" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="dev" data-skip-pjax="true" rel="nofollow" title="dev">dev</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/apache/cordova-plugin-media-capture/tree/master/src/ios/CDVCapture.bundle" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" data-skip-pjax="true" rel="nofollow" title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/apache/cordova-plugin-media-capture/tree/r0.2.0/src/ios/CDVCapture.bundle" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="r0.2.0" data-skip-pjax="true" rel="nofollow" title="r0.2.0">r0.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/apache/cordova-plugin-media-capture/tree/3.0.0rc1/src/ios/CDVCapture.bundle" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="3.0.0rc1" data-skip-pjax="true" rel="nofollow" title="3.0.0rc1">3.0.0rc1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/apache/cordova-plugin-media-capture/tree/3.0.0/src/ios/CDVCapture.bundle" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="3.0.0" data-skip-pjax="true" rel="nofollow" title="3.0.0">3.0.0</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/apache/cordova-plugin-media-capture" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">cordova-plugin-media-capture</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/apache/cordova-plugin-media-capture/tree/master/src" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">src</span></a></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/apache/cordova-plugin-media-capture/tree/master/src/ios" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">ios</span></a></span><span class="separator"> / </span><strong class="final-path">CDVCapture.bundle</strong><span class="separator"> / </span><form action="/login?return_to=%2Fapache%2Fcordova-plugin-media-capture%2Ftree%2Fmaster%2Fsrc%2Fios%2FCDVCapture.bundle" class="js-new-blob-form tooltipped rightwards new-file-link" method="post" title="Sign in to make or propose changes"><span aria-label="Sign in to make or propose changes" class="js-new-blob-submit octicon octicon-file-add" data-test-id="create-new-git-file" role="button"></span></form></div>
+
+  <p class="history-link">
+<a href="/apache/cordova-plugin-media-capture/commits/master/src/ios/CDVCapture.bundle">      <span class="octicon octicon-history tooltipped" title="Browse commits for this branch"></span>
+      History
+</a>  </p>
+</div>
+
+
+
+<a href="/apache/cordova-plugin-media-capture/find/master"
+  data-hotkey="t" class="js-show-file-finder" style="display:none" data-pjax>Show File Finder</a>
+<div class="bubble files-bubble">
+  <table class="files" data-pjax>
+    <thead>
+
+        
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a>
+        
+    </p>
+    <div class="commit-meta">
+      <span class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" data-copied-hint="copied!" title="Copy SHA"><span class="octicon octicon-clippy"></span></span>
+      <a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="sha-block" data-pjax>latest commit <span class="sha">49ed92e2b4</span></a>
+
+      <div class="authorship">
+        <img class="gravatar" height="20" src="https://2.gravatar.com/avatar/0b889317550ddbf2685447f73a3156ee?d=https%3A%2F%2Fidenticons.github.com%2Fea290b1287e57f0e4583722a27a560fc.png&amp;s=140" width="20" />
+        <span class="author-name"><a href="/shazron" data-skip-pjax="true" rel="contributor">shazron</a></span>
+        authored <time class="js-relative-date updated" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time>
+
+      </div>
+    </div>
+  </div>
+
+    </thead>
+      <tr class="up-tree">
+        <td></td>
+        <td><a href="/apache/cordova-plugin-media-capture/tree/master/src/ios" rel="nofollow" title="Go to parent directory">..</a></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+    
+<tbody class=""
+  data-url="/apache/cordova-plugin-media-capture/file-list/master/src/ios/CDVCapture.bundle">
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/controls_bg.png" class="js-directory-link" id="99c0bb6d7ab005d29fe0927a85a8b88a-784e9c7dd90d1d4fe8f4bdae440510dcefda353f" title="controls_bg.png">controls_bg.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/controls_bg%402x.png" class="js-directory-link" id="14e9d365542c6c2ff486559dc61426e9-1e28c6dbc7833617903b978f7e3e4dff93ed9f79" title="controls_bg@2x.png">controls_bg@2x.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/controls_bg%402x%7Eipad.png" class="js-directory-link" id="2dc5cebe6955d96732aad6578e1ba864-d4e348360f919045798b23d7c2f21f659e1ad8d1" title="controls_bg@2x~ipad.png">controls_bg@2x~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/controls_bg%7Eipad.png" class="js-directory-link" id="9a7349246b52daa928055363c9004aa3-efbef8aaab3c074854ca2831511a11e40e50af91" title="controls_bg~ipad.png">controls_bg~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/microphone-568h%402x%7Eiphone.png" class="js-directory-link" id="4d10131ff2369a3c03fa6b515ed11e1a-8e80f73b674ff44e3773d6f90a2a28b114e0d455" title="microphone-568h@2x~iphone.png">microphone-568h@2x~iphone.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/microphone.png" class="js-directory-link" id="c7981f00f4d488ad278f47b4c92e4a1f-155b88cae46eca1d153631e5c1f6fe275585d617" title="microphone.png">microphone.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/microphone%402x.png" class="js-directory-link" id="1578c5385c67087f366cfa51fbb62a98-79ef16bac963df7e8f5735299d0c6455e7e2f6db" title="microphone@2x.png">microphone@2x.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/microphone%402x%7Eipad.png" class="js-directory-link" id="ecf5ca96c68d8398d7b4f157636d6373-af1bbb2197dc41bc000fcbcd56fd55575c959810" title="microphone@2x~ipad.png">microphone@2x~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/microphone%7Eipad.png" class="js-directory-link" id="62f97d9ce36a4123572a7e33357629e9-ef1c472bf6ac66acd6fa0f0b9002395693d4f23e" title="microphone~ipad.png">microphone~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/record_button.png" class="js-directory-link" id="076b287c406102db50c1f04ca0d6c255-ceb95898fcf29718a29dc019ac9ebb83442d3301" title="record_button.png">record_button.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/record_button%402x.png" class="js-directory-link" id="69444af83c92e58181da2b74d1c3024e-d6ce302812d099f6ddb9f043be054b9abbf79532" title="record_button@2x.png">record_button@2x.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/record_button%402x%7Eipad.png" class="js-directory-link" id="917a682fbf743e8367a4d6c5c4fad8d7-0ac2e679c303e7e3c818710fb8a3619a107cc7b0" title="record_button@2x~ipad.png">record_button@2x~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/record_button%7Eipad.png" class="js-directory-link" id="cf679736e59c57b6c0097eff866473d7-d8e24a4d013b84e8461349fb037288e58db9c57c" title="record_button~ipad.png">record_button~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/recording_bg.png" class="js-directory-link" id="ca045a9ac89d45ee82faf11dc1bdda80-bafc087e20654eaa9850f1566cf47cce54e9fd3a" title="recording_bg.png">recording_bg.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/recording_bg%402x.png" class="js-directory-link" id="eaf875dee6d9eea64b7e18883d44ad01-798490b0fedfefb57442a6833344825af28423ba" title="recording_bg@2x.png">recording_bg@2x.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/recording_bg%402x%7Eipad.png" class="js-directory-link" id="4f2e6280301f036994370c5c9cde78f8-a1b7208f39742f8e752a992b0f926cc4c3c2da80" title="recording_bg@2x~ipad.png">recording_bg@2x~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/recording_bg%7Eipad.png" class="js-directory-link" id="27e9c1f9949c4c2ea3f22b2f8a7cf84c-3b467f63299d1ce7ff25d98de8fa936d6a01f41f" title="recording_bg~ipad.png">recording_bg~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/stop_button.png" class="js-directory-link" id="4ac1f5697c7b160f3b5d944331b0aa57-9c31838a4b174832d281230573483d437b4d517d" title="stop_button.png">stop_button.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/stop_button%402x.png" class="js-directory-link" id="1642a10c370f98bd1aa51e4737281787-8cf657eaa8b362d6a13fbb8ff033e07cfef1c67a" title="stop_button@2x.png">stop_button@2x.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/stop_button%402x%7Eipad.png" class="js-directory-link" id="04d72f0cfbfc3886f431d40158c7a863-88b606c863e93fa2ba411e9ed11be1199270391c" title="stop_button@2x~ipad.png">stop_button@2x~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+    <tr class="alt">
+      <td class="icon">
+        <span class="octicon octicon-file-text"></span>
+        <img alt="Octocat-spinner-32" class="spinner" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+      </td>
+      <td class="content">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/blob/master/src/ios/CDVCapture.bundle/stop_button%7Eipad.png" class="js-directory-link" id="a46e05ee8ca3525ef0d2f5d57bcf0544-59bb7a573d1f93d8b445752516cd3596d9d68752" title="stop_button~ipad.png">stop_button~ipad.png</a></span>
+      </td>
+      <td class="message">
+        <span class="css-truncate css-truncate-target"><a href="/apache/cordova-plugin-media-capture/commit/49ed92e2b4cc0e3f0d8e6f0017f10bddad7a1c01" class="message" data-pjax="true" title="[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)">[CB-3701] Breakout Media Capture Plugin for iOS (re-fix)</a></span>
+      </td>
+      <td class="age"><span class="css-truncate css-truncate-target"><time class="js-relative-date" datetime="2013-06-25T15:31:06-07:00" title="2013-06-25 15:31:06">June 25, 2013</time></span></td>
+    </tr>
+</tbody>
+
+  </table>
+</div>
+
+  
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.02405s from github-fe133-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/apache/cordova-plugin-media-capture/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Kyler Schroeder" />
+        
+        <!-- Viewport options -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320" />
+
+		<!-- Smooth fonts in IE Mobile -->
+		<meta http-equiv="cleartype" content="on" />
+        
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.2.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.2.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <title>Black Hills Art Finder</title>
+    
+    </head>
+    
+    <body>
+        
+    	<section data-role="page" id="home" data-theme="c">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    Kyler Schroeder - Black Hills Art Finder - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <ul data-role="listview" data-theme="c" data-inset="true">
+                    <li data-role="list-divider">Native Features</li>
+                    <li>
+                        <a href="#nativeCamera">
+                            <h3>Camera</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nativeCapture">
+                            <h3>Capture</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nativeGeo">
+                            <h3>Geolocation</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nativeContacts">
+                            <h3>Contacts</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nativeCompass">
+                            <h3>Compass</h3>
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul data-role="listview" data-theme="c" data-inset="true">
+                    <li data-role="list-divider">API's</li>
+                    <li>
+                        <a href="#instagramFeed">
+                            <h3>Instagram</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#twitterFeed">
+                            <h3>Twitter</h3>
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul data-role="listview" data-theme="c" data-inset="true">
+                    <li data-role="list-divider">Discussions</li>
+                    <li>
+                        <a href="#disc1">
+                            <h3>Discussion 1</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#disc2">
+                            <h3>Discussion 2</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#disc3">
+                            <h3>Discussion 3</h3>
+                        </a>
+                    </li>
+                </ul>
+			</section>
+            
+		</section>
+        
+        <section data-role="page" id="nativeCamera" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Camera - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Camera</h2>
+                <button onclick="capturePhoto();">Capture Photo</button> <br>
+                <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+                <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+                <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+                <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+                <img style="display:none;" id="largeImage" src="" />
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="nativeCapture" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Capture - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Capture</h2>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="nativeGeo" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Geolocation - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Geolocation</h2>
+                <!--<a onclick="getCurrentPosition" href="#" data-role="button" data-mini="true">Find Current Location</a>-->
+                <p id="geolocation">Finding geolocation...</p>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="nativeContacts" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Contacts - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Contacts</h2>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="nativeCompass" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Notifications - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Compass</h2>
+                 <p>getCurrentHeading</p>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="instagramFeed" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Instagram Feed - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 id="instagramStatus">Searching Instagram...</h2>
+                <ul id="pullFeed" class="ui-grid-b ui-responsive">
+                </ul>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="twitterFeed" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Twitter Feed - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Twitter Feed</h2>
+				<section class="twitter_feed"></section>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="disc1" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Discussion Week 1 - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Discussion Week 1</h2>
+				<p><strong>1. </strong><strong>Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</strong></p>
+<p>Logins is a very obvious resource to me, you see it everywhere now whether it&rsquo;s to log in with Twitter, Facebook or Google+.  That is the greatest thing anyone has really ever thought of because it takes the burden of security off of the site/app developer and keeps it on the social network.  You also don&rsquo;t need to bother your users with creating yet another account with another password.</p>
+<p>A very cool service called &ldquo;Pay With a Tweet&rdquo; uses an individual tweet as a payment for a product or service.  You just put a &ldquo;Pay With A Tweet&rdquo; button on your website and when a user clicks on it, it posts to their Twitter feed, exposing all of their followers to your product.  According to their intro video there are 10,000 buttons that exist and they have generated over 400,000 downloads.  I don&rsquo;t know how they actually make money but it&rsquo;s a cool tool to help your content go viral.</p>
+<p>I also found a few articles of companies, namely Ribbon and Flattr, who have been &lsquo;asked&rsquo; to stop their use of the Twitter API because of a Terms of Use violation.  Flattr is a cool service that books them self as an online tip jar and used the &lsquo;Favorite&rsquo; button as a way to tip someone.  First you bind your Flattr account to your Twitter account, fund your Flattr account then every time you &lsquo;Favorite&rsquo; something on Twitter, it tips the other account (who would have already taken the same steps) a dime.  Twitter, however, said this is a form of paid advertising and thus violates their Terms of Use.</p>
+<p>&nbsp;</p>
+<p><strong>2. </strong><strong>Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</strong></p>
+<p>If you want to host all of the data for an API you are releasing for public use, use JSONP.  JSON is an object notation format used for holding data and it works great, unless you don&rsquo;t have access to the server it&rsquo;s on, enter JSONP.  With JSONP you can build your API and keep full control of the data as client machines, be it a Desktop, Laptop, Phone, Tablet or other device can still go out and access your data.  As an app developer that&rsquo;s gold, it&rsquo;s one more way to build in dynamic content to your app.</p>
+<p>&nbsp;</p>
+<p><strong>3. </strong><strong>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</strong></p>
+<p>Camera – Twicsy, Zoom.it and Face.com<br>
+    GeoLocation – Panoramio, SimpleGeo and WikiLocation<br>
+    Notification – PubNub and Urban AirShip</p>
+<p>&nbsp;</p>
+<p><strong>4. </strong><strong>Please describe any design and functionality intentions you may have for your Demo app components this month.</strong></p>
+<p>I intend to make my app a local art finding app where the intent is to snap photos of graffiti around town then alert your friends and the app community via Twitter, SMS (with your contacts), push notifications and mark it on a map with geolocation.  I&rsquo;m not quite sure how to integrate instagram, I would like to be able to push the photos that a user takes to a public instagram feed but I don&rsquo;t know if that&rsquo;s possible.  Otherwise, I will be pulling in an instagram feed from either the local contemporary art museum, the Find A Way Collective or the Art Alley Artists Guild.</p>
+<p>&nbsp;</p>
+<p><strong>5. </strong><strong>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</strong></p>
+<p>I&rsquo;ve learned an relearned many lessons in my career but the most important lesson is to not stare at a blank canvas.  This is important in any medium, whether you&rsquo;re coding, designing in Photoshop, painting, drawing, etc.  Get something down, anything, because then you can start to build on it and generate that creative focused energy.  Also, know that your idea – no matter how amazing and unique… has probably already been done in one way or another.  AND THAT&rsquo;S OK!  Do you think Facebook was the first social network?  Nope, it was arguably about six years late to the party and now it&rsquo;s the biggest and best social network, ever.  Look for inspiration and build on it, don&rsquo;t clone, improve.</p>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="disc2" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Discussion Week 2 - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Discussion Week 2</h2>
+                <p><strong>1. What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance).</strong></p>
+<p>I&rsquo;ve been coding HTML on and off for about 11 years now and I never really followed any kind of semantic structure until the HTML5 spec started to take hold about 4 years ago.  I think I&rsquo;m pretty good about keeping my code clean, organized and semantic but my one kryptonite is using alt tags.  For some reason I always forget about them.  I don&rsquo;t think there is actually any place in my app yet that would utilize an alt tag but if I ever get around to doing some branding and such I will definitely need to remember to put them in there.</p>
+<p><strong>2. </strong><strong>Visit a video service on the web (like YouTube) and search for &quot;Screen Reader Demo&quot; and &quot;Mobile Screen Reader&quot; - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</strong></p>
+<p>I currently work for a university and have a little bit of first hand knowledge of accessibility issues.  One interesting thing that I found is that for the most part the screen reading technology is actually pretty good and people are happy with its progression.  The major roadblock seems to be the content and platform developers.</p>
+<p>jQuery Mobile is one of the exceptions due to the fact that it&rsquo;s built on top of semantic HTML so it&rsquo;s already accessible.  That is, unless whom ever is coding doesn&rsquo;t use semantic HTML.  Most of the CMS developers are doing a good job of making their platforms accessible and where they lack functionality there are plenty of developers in the community that come through is plug-ins.</p>
+<p>It really is up to the current developers and the authors and the teachers, etc. to use and teach proper coding practices. </p>
+<p><strong>3. </strong><strong>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</strong></p>
+<p>Jouse2 – a joystick operated USB mouse.  If you had ever seen Christopher Reeves in his wheel chair you may have noticed that he wasn&rsquo;t able to use a joystick and that he used a &lsquo;sip and puff&rsquo; controller.  The Jouse2 USB mouse works using the same technology, the joystick mounts to the desk and you can use your chin or any other body part to move the joystick then &lsquo;sip and puff&rsquo; to perform click, right-click and double click actions.  I used to play StarCraft and Warcraft with a guy who used something like this and he was a far better player than most in the community.</p>
+<p>Tobii PCEye – a peripheral that allows you to operate your computer using only your eyes.  The PCEye uses gaze interaction to interact with a Windows based computer, anything that you can do with a mouse can be done with simple eye movements.  It is also USB powered and has a built in processor so it wont effect your PC at all during use.</p>
+<p><strong>4. </strong><strong>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility. </strong></p>
+<p>Google TalkBack is a system preinstalled accessibility feature giving users auditory and tactile feedback when interacting with a plethora of popular apps such as Facebook, FourSquare, Amazon, Bump, Google Maps, IMDB and Dropbox.</p>
+<p>Something that I&rsquo;m extremely excited about and I just found out that there are multiple companies doing it now is keyless home entry.  August Smart Lock looks like the most elegant but there is also Lockitron, which sounds the coolest and has just been successfully crowdsource funded and also Kwikset, which is the top Google rank.  How is this accessibility related you ask?  Well none of you know this about me but I am actually in a wheelchair myself and even though I have my own set of keys, I can&rsquo;t actually get close enough to the lock to use them.  By simply using your smartphone you can unlock your door and go in, no keys required!  You can also grant other people access with their smartphones which means not having to rush to answer the door or even be home as getting a ride is sometimes difficult!  Super excited about this if you can&rsquo;t tell :)</p>
+            </section>
+            
+        </section>
+        
+        <section data-role="page" id="disc3" data-theme="c" data-add-back-btn="true">
+
+			<section data-role="header">
+				<header class="index"> <!-- App logo -->
+					<!--<a href="index.html"><img src="img/logo.png"></a>-->
+                    <a href="#home" data-role="button" data-mini="true" data-icon="arrow-l" data-inline="true">Back</a>
+                    Kyler Schroeder - Discussion Week 3 - 1309
+				</header>
+			</section>
+
+			<section data-role="content">
+                <h2 class="centered">Discussion Week 3</h2>
+            </section>
+            
+        </section>
+
+	    <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/jquery.mobile-1.3.2.min.js"></script>
+		<script type="text/javascript" src="cordova.js" charset="utf-8"></script>
+		<script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
+		<script src="js/min.tweet.3.js"></script> <!-- include the GMTweets library -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
